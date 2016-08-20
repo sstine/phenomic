@@ -102,3 +102,23 @@ test("routes to urls without matches", (t) => {
     },
   })
 })
+
+const routesWithRedirection = (
+  <Route component={ Noop }>
+    <Route from="/redirect-from-me" to="redirect-to-me" />
+    <Route path="*" component={ Noop } />
+  </Route>
+)
+
+test("route redirection to urls", (t) => {
+  const urls = routesToUrls(routesWithRedirection, collection)
+
+  t.deepEqual(
+    urls,
+    [
+      "/redirect-from-me",
+      "/one",
+      "/two",
+    ],
+  )
+})

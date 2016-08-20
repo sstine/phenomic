@@ -8,8 +8,15 @@ import arrayUnique from "../../_utils/array-unique"
 const defaultConsole = console
 
 const flattenRoute = (route) => {
+  let routesUrls = []
   const root = route.path ? route.path : ""
-  let routesUrls = route.path ? [ route.path ] : []
+
+  if (route.path) {
+    routesUrls = [ route.path ]
+  }
+  else if (route.from) {
+    routesUrls = [ route.from ]
+  }
 
   if (route.childRoutes) {
     route.childRoutes.forEach((route) => {

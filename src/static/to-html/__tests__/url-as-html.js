@@ -170,3 +170,35 @@ test("custom script tags", async (t) => {
 </html>`)
   t.is(beautifyHTML(html),  expectedHTML)
 })
+
+test("redirection", async (t) => {
+  const html = await urlAsHtml(
+    "/redirect-from-me",
+    {
+      routes: require("./fixtures/routes-with-redirection.js").default,
+      collection,
+      store,
+      baseUrl: url.parse("http://0.0.0.0:3000/foo"),
+      assetsFiles: {
+        js: [ "test.js" ],
+      },
+    },
+    true
+  )
+
+  const expectedHTML = (
+    `<html>
+
+<head>
+  <meta http-equiv="refresh" content="0;URL='/foo/redirect-to-me'" />
+</head>
+
+<body>
+  <p>
+    Redirecting to <a href="/foo/redirect-to-me">/foo/redirect-to-me</a>...
+  </p>
+</body>
+
+</html>`)
+  t.is(beautifyHTML(html),  expectedHTML)
+})

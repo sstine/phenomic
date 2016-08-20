@@ -30,6 +30,8 @@ class PageContainer extends Component {
 
 export default (
   <Route component={ LayoutContainer }>
+    <Route from="/old-location" to="new-location" />
+    <Route from="/old-location/" to="new-location" />
     <Route path="*" component={ PageContainer } />
   </Route>
 )

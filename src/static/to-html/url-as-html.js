@@ -11,7 +11,7 @@ import pathToUri from "../../_utils/path-to-uri"
 import Html from "./Html"
 import PhenomicContextProvider from "../../ContextProvider"
 import serialize from "../../_utils/serialize"
-
+import redirectionToHTML from "../redirection-to-html"
 import minifyCollection from "../../phenomic-loader/minify"
 
 export default function(
@@ -68,9 +68,15 @@ export default function(
             return reject(error)
           }
           else if (redirectLocation) {
-            // TODO add a redirect page à la "jekyll redirect plugin"
-            throw new Error (
-              "phenomic (static) doesn't handle redirection yet"
+            console.log("=".repeat(20))
+            console.log(redirectLocation)
+            console.log(url)
+            console.log("=".repeat(20))
+            resolve(
+              redirectionToHTML(
+                redirectLocation.pathname,
+                redirectLocation.basename
+              )
             )
           }
           else if (!renderProps) {
