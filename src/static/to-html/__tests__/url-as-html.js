@@ -40,11 +40,9 @@ test("url as html", async (t) => {
   </div>
   <script>
     window.__COLLECTION__ = [{
-      "__url": "/",
-      "__resourceUrl": "/index.html"
+      "__url": "/"
     }, {
-      "__url": "/test-url",
-      "__resourceUrl": "/test-url/index.html"
+      "__url": "/test-url"
     }];
     window.__INITIAL_STATE__ = {
       "pages": {
@@ -96,11 +94,9 @@ test("baseUrl with offline support", async (t) => {
   </div>
   <script>
     window.__COLLECTION__ = [{
-      "__url": "/",
-      "__resourceUrl": "/index.html"
+      "__url": "/"
     }, {
-      "__url": "/test-url",
-      "__resourceUrl": "/test-url/index.html"
+      "__url": "/test-url"
     }];
     window.__INITIAL_STATE__ = {
       "pages": {
@@ -149,11 +145,9 @@ test("custom script tags", async (t) => {
   </div>
   <script>
     window.__COLLECTION__ = [{
-      "__url": "/",
-      "__resourceUrl": "/index.html"
+      "__url": "/"
     }, {
-      "__url": "/test-url",
-      "__resourceUrl": "/test-url/index.html"
+      "__url": "/test-url"
     }];
     window.__INITIAL_STATE__ = {
       "pages": {

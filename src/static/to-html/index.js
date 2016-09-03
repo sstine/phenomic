@@ -90,7 +90,7 @@ export function writeAllHTMLFiles(
     urls.map((url) => {
       const item = collection.find((item) => item.__url === url)
       const filename = item
-        ? path.join(destination, item.__resourceUrl)
+        ? path.join(destination, urlify(item.__url, true))
         : path.join(destination, urlify(url, true))
 
       setPageData(url, collection, store)

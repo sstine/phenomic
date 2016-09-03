@@ -48,7 +48,7 @@ function find(
   return collection.find((item) => (
     item.__url === pageUrl ||
     item.__url === pageUrl + "/"||
-    item.__resourceUrl === pageUrl
+    urlify(item.__url, true) === pageUrl
   ))
 }
 

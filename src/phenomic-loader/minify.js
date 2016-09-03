@@ -12,7 +12,6 @@ export default (
     ...item.head,
     __filename: item.__filename,
     __url: item.__url,
-    __resourceUrl: item.__resourceUrl,
     __dataUrl: item.__dataUrl,
   }))
 }
