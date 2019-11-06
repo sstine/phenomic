@@ -20,6 +20,7 @@
 <a title="Version" href="https://github.com/MoOx/phenomic/blob/master/CHANGELOG.md">
   <img src="https://img.shields.io/npm/v/phenomic.svg" />
 </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fsstine%2Fphenomic?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsstine%2Fphenomic.svg?type=shield"/></a>
 </p>
 
 <p align="center">
@@ -149,3 +150,6 @@ Does your company use Phenomic?  Ask your manager or marketing team if your comp
 ## [CHANGELOG](CHANGELOG.md)
 
 ## [LICENSE](LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsstine%2Fphenomic.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsstine%2Fphenomic?ref=badge_large)
